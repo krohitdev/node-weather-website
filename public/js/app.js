@@ -1,12 +1,14 @@
 console.log('Client side js');
 
-const weatherFform = document.querySelector('form');
+const weatherForm = document.querySelector('form');
 const search = document.querySelector('input');
 const messageOne = document.querySelector('#message-1');
 const messageTwo = document.querySelector('#message-2');
+if(!weatherForm){
+    return;
+}
 
-
-weatherFform.addEventListener('submit', (e)=>{
+weatherForm.addEventListener('submit', (e)=>{
     e.preventDefault();
     const location = search.value;
     
